@@ -41,7 +41,7 @@ To create our new app on OpenShift:
 
 {{{
 
-rhc app create hellotornado -t diy-0.1 --from-code=https://github.com/giulivo/openshift-hellotornado
+rhc app create hellotornado -t diy-0.1 --from-code=https://github.com/campusdebate/openshift-tornado-cdb
 cd hellotornado
 }}}
 
