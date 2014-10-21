@@ -1,0 +1,9 @@
+#!/bin/bash
+# OpenShift python cartridge configuration.
+
+PYTHON_VERSION="2.7.6"
+PYTHON_DIR="$OPENSHIFT_DATA_DIR/python"
+VIRTUALENV_DIR="$OPENSHIFT_DATA_DIR/venv"
+
+REQUIREMENTS_FILE="$OPENSHIFT_REPO_DIR/requirements.txt"
+TEMPLATES_DIR="$OPENSHIFT_REPO_DIR/misc/templates"

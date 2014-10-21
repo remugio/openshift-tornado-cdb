@@ -1,0 +1,12 @@
+#!/bin/bash
+source $OPENSHIFT_REPO_DIR/misc/openshift/func
+source $OPENSHIFT_REPO_DIR/misc/openshift/virtualenv
+
+env | sed 's/[\%]/\\&/g;s/\([^=]*\)=\(.*\)/s%${\1}%\2%/' > $OPENSHIFT_TMP_DIR/sed.script
+
+function expand_env_vars() {
+    local SRC=$1
+    local DEST=$2
+    cat $SRC | sed -f $OPENSHIFT_TMP_DIR/sed.script > $DEST
+}
+
